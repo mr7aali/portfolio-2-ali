@@ -13,7 +13,7 @@ const NavItem:FunctionComponent<{
     return (
          activeItems !== name ? (
             <Link href={route}>
-            <span onClick={() => setActiveItems(name)}>{name}</span>
+            <span  onClick={() => setActiveItems(name)} className='hover:text-green'>{name}</span>
           </Link>
           ): null
 
@@ -33,33 +33,13 @@ const Navbar = () => {
   },[])
 
   return (
-    <div>
-      <span className="font-bold text-green">{activeItems}</span>
-      <div className=" text-red font-lg flex space-x-3 text-red-400">
-
-
-        {/* {activeItems !== "About" && (
-          <Link href="/">
-            <span onClick={() => setActiveItems("About")}>About</span>
-          </Link>
-        )}
-        {activeItems !== "Projects" && (
-          <Link href="/Project">
-            <span onClick={() => setActiveItems("Projects")}>Projects</span>
-          </Link>
-        )}
-        {activeItems !== "Resume" && (
-          <Link href="/Resume">
-            <span onClick={() => setActiveItems("Resume")}>Resume</span>
-          </Link>
-        )} */}
+    <div className="flex justify-between px-5 py-3 my-3">
+      <span className="font-bold text-green text-xl border-b-4 border-green md:text-2xl">{activeItems}</span>
+      <div className=" text-red text-lg flex space-x-3 text-red-400">
 
         <NavItem activeItems={activeItems} setActiveItems={setActiveItems } name={"About" }route={'/'}/>
         <NavItem activeItems={activeItems} setActiveItems={setActiveItems } name={"Projects" }route={'/Projects'}/>
         <NavItem activeItems={activeItems} setActiveItems={setActiveItems } name={"Resume" }route={'/Resume'}/>
-
-
-
 
       </div>
 
