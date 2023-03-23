@@ -1,9 +1,11 @@
+
+import ServiceCard from "components/ServiceCard";
 import { GetServerSidePropsContext, GetStaticPropsContext } from "next";
 import React from "react";
 import { services } from "../../data";
 
 const index = () => {
-  
+ 
   return (
     <div>
       <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto praesentium exercitationem voluptatibus unde magni similique veniam in minus libero delectus.
@@ -13,7 +15,9 @@ const index = () => {
         <h5>What i offer</h5>
         <div>
           {
-            services.map(service=> <ServiceCard service={service}/> )
+             services?.map(s=> <ServiceCard 
+              key={s.title}
+              service={s}/> )
           }
         </div>
       </div>
