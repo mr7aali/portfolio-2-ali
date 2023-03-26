@@ -13,7 +13,7 @@ const NavItem:FunctionComponent<{
     return (
          activeItems !== name ? (
             <Link href={route}>
-            <span  onClick={() => setActiveItems(name)} className='hover:text-green'>{name}</span>
+            <span  onClick={() => setActiveItems(name)} className='hover:text-green dark:text-white'>{name}</span>
           </Link>
           ): null
 

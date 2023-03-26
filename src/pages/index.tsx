@@ -12,14 +12,14 @@ const index = () => {
         minus libero delectus.Iusto praesentium exercitationem voluptatibus unde
         magni similique veniam in minus libero delectus.
       </h5>
-      <div className="p-4 mt-5 bg-gray-400 flex-grow"
+      <div className="p-4 mt-5 bg-gray-400 dark:bg-dark-100 flex-grow"
        style={{marginLeft:'-1.5rem',marginRight:'-1.5rem'}}>
         <h5 className="my-3 text-xl font-bold tracking-wide">What i offer</h5>
         <div className="grid lg:grid-cols-2 gap-6">
           {services?.map((s) => (
 
 
-            <div key={s.title} className='bg-gray-200 rounded-lg lg:col-span-1'>
+            <div key={s.title} className='bg-gray-200 dark:bg-dark-200 rounded-lg lg:col-span-1'>
               <ServiceCard service={s} />
             </div>
 
