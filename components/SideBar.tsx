@@ -3,10 +3,18 @@ import { GoLocation } from "react-icons/go";
 import { GiTie } from "react-icons/gi";
 import { useTheme } from "next-themes";
 const SideBar = () => {
-  const { theme, setTheme } = useTheme();
-
+  let { theme, setTheme } = useTheme();
+  
   const changeTheme = () => {
-    setTheme((theme = "light" ? "dark" : "light"));
+    if(theme=='light'){
+      theme='dark'
+    }
+    else{
+      theme='light'
+    }
+    setTheme(theme );
+    console.log(theme);
+    
   };
   return (
     <div>
@@ -57,7 +65,7 @@ const SideBar = () => {
       >
         Email Me
       </button>
-      <button className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-400">
+      <button onClick={changeTheme} className="w-8/12 px-5 py-2 my-2 text-white rounded-full bg-gradient-to-r from-green to-blue-400">
         Toggle Theme
       </button>
     </div>
