@@ -1,8 +1,13 @@
 import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { GiTie } from "react-icons/gi";
-
+import { useTheme } from "next-themes";
 const SideBar = () => {
+  const { theme, setTheme } = useTheme();
+
+  const changeTheme = () => {
+    setTheme((theme = "light" ? "dark" : "light"));
+  };
   return (
     <div>
       <img
