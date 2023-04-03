@@ -2,6 +2,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { GiTie } from "react-icons/gi";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 const SideBar = () => {
   let { theme, setTheme } = useTheme();
   
@@ -20,10 +21,12 @@ const SideBar = () => {
   };
   return (
     <div>
-      <img
+      <Image
         src="https://i.ibb.co/4JBGr3z/img-For-LIke-ID.jpg"
         alt="User abatar"
         className="w-32 h-32 mx-auto rounded-full"
+         width='128'
+         height='128'
       />
       <h3 className="my-4 text-3xl font-medium tracking-wider font-Kaushan">
         <span className="text-green">Mr</span> Aali
