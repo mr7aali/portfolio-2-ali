@@ -3,7 +3,8 @@ import { FunctionComponent, useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { IProject } from "type";
-
+import { motion } from "framer-motion";
+import { fadeInUp, staggerani } from "@/styles/animation/animation";
 const ProjectCart: FunctionComponent<{
   project: IProject;
 }> = ({
@@ -34,17 +35,20 @@ const ProjectCart: FunctionComponent<{
 
       {open && (
         <div className="grid md:grid-cols-2 p-2 absolute left-0 top-0 z-10 h-auto w-full gap-x-12 text-black dark:text-white bg-gray-100 dark:bg-dark-100">
-          <div>
+          <motion.div variants={staggerani} initial="initial" animate="animate">
             {/* <img src={image_path} alt={name} /> */}
-            <Image
-              src={image_path}
-              alt={name}
-             
-              layout="responsive"
-              width="350"
-              height="150"
-            />
-            <div className="flex justify-start my-4 space-x-3 ">
+            <motion.div
+            variants={fadeInUp}
+            >
+              <Image
+                src={image_path}
+                alt={name}
+                layout="responsive"
+                width="350"
+                height="150"
+              />
+            </motion.div>
+            <motion.div  variants={fadeInUp} className="flex justify-start my-4 space-x-3 ">
               <a
                 href=""
                 className="flex items-center px-4 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
@@ -57,17 +61,16 @@ const ProjectCart: FunctionComponent<{
               >
                 <AiFillGithub /> <span>Project</span>
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="">
-            <h2 className="mb-3 text-xl font-medium md:text-2xl">{name}</h2>
-            <h3 className="mb-3 font-medium">{description}</h3>
+          <motion.div variants={staggerani} initial="initial" animate="animate">
+            <motion.h2 variants={fadeInUp} className="mb-3 text-xl font-medium md:text-2xl">{name}</motion.h2>
+            <motion.h3 variants={fadeInUp} className="mb-3 font-medium">{description}</motion.h3>
 
-            <div>
-              {/* <h2>{name}</h2>
-              <h3>{description}</h3> */}
-              <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
+           {/* // <div> */}
+          
+              <motion.div variants={fadeInUp} className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
                 {key_techs.map((t) => (
                   <span
                     key={t}
@@ -76,9 +79,9 @@ const ProjectCart: FunctionComponent<{
                     {t}
                   </span>
                 ))}
-              </div>
-            </div>
-          </div>
+              </motion.div>
+           {/* // </div> */}
+          </motion.div>
           <button
             onClick={() => setOpen(false)}
             className="absolute p-1 rounded-full top-3 right-3 focus:outline-none bg-gray-200 dark:bg-dark-200"

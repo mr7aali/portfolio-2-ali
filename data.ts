@@ -23,7 +23,7 @@ export const services:IService[] = [
         Icon: AiOutlineApi,
         title: "API Development",
         about:
-          "I can develop robust  REST API using <b>django-rest-api</b>  & <b>Node API</b> ",
+          "I can develop robust  REST API using  <b>Node API</b> ",
       },
       {
         Icon: MdDeveloperMode,
@@ -40,7 +40,7 @@ export const services:IService[] = [
         Icon: RiComputerLine,
         title: "Whatever",
         about:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis minima autem!",
+          "I'm a fast learner, eager to take on new challenges and always looking for opportunities to learn and grow.",
       },
   
 ]
@@ -104,14 +104,14 @@ export const tools: ISkill[] = [
 
 export const projects: IProject[] = [
    { 
-     name: "COVID Tracker",
+     name: "Astor",
      description:
        "This app shows a statistical view about corona virus over the world",
-     image_path: "/images/covid.jpg",
-     deployed_url: "https://covid-19-tracker-by-sumit.web.app/",
-     github_url: "https://github.com/Dey-Sumit/covid-19-tracker",
+     image_path: "/images/astor.jpeg",
+     deployed_url: "https://mellifluous-crisp-9fb9ee.netlify.app/",
+     github_url: "https://github.com/mr7aali/astor",
      category: ["react"],
-     key_techs: ["React", "Chart.js", "Material UI"],
+     key_techs: ["React", "tailwind CSS", "Material UI"],
    },
    {
      name: "Algorithm Visualizer",
